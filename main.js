@@ -37,8 +37,9 @@ const suggBox = searchWrapper.querySelector(".autocom-box");
 const icon = searchWrapper.querySelector(".icon");
 let linkTag = searchWrapper.querySelector("a");
 let webLink;
+
 inputBox.onkeyup = (e)=>{
-    let userData = e.target.value; //user enetered data
+    let userData = e.target.value;
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
@@ -74,30 +75,60 @@ inputBox.onkeyup = (e)=>{
         searchWrapper.classList.remove("active");
     }
 }
-
 function select(element){
     let selectData = element.textContent;
     inputBox.value = selectData;
     icon.onclick = ()=>{
-        webLink = `https://www.google.com/search?q=${selectData}`;
-        linkTag.setAttribute("href", webLink);
-        linkTag.click();
+      $.getJSON(`https://www.google.com/search?q=${selectData}`, function(data){
+
+        for (let i = 0; i < 14; i++) {
+      
+          logo = data.recipes[i].image;
+          $('#'+i+'_img').attr("src", logo);
+      
+      
+          Name = data.recipes[i].title;
+          $('#'+i+'_h5').append(Name);
+        
+      
+          diet = data.recipes[i].diets;
+          $('#'+i+'_h6_diets').append(diet);
+      
+          healthscore = data.recipes[i].healthScore;
+          $('#'+i+'_h6_healthscore').append("health Score :- ",healthscore);
+      
+      
+          licenseby = data.recipes[i].license;
+          $('#'+i+'_h6_license').append(licenseby);
+      
+      
+          sourceurl = data.recipes[i].sourceUrl;
+          $('.'+i+'a').attr("href",sourceurl);
+      
+        }
+      
+      });
     }
     searchWrapper.classList.remove("active");
 }
-
-function showSuggestions(list){
-    let listData;
-    if(!list.length){
-        userValue = inputBox.value;
-        listData = `<li>${userValue}</li>`;
-    }else{
-      listData = list.join('');
-    }
-    suggBox.innerHTML = listData;
+function select(element){
+  let selectData = element.textContent;
+  inputBox.value = selectData;
+  icon.onclick = ()=>{
+      webLink = `https://www.google.com/search?q=${selectData}`;
+      linkTag.setAttribute("href", webLink);
+      linkTag.click();
+  }
+  searchWrapper.classList.remove("active");
 }
 
-
-function get_me(){
-
+function showSuggestions(list){
+  let listData;
+  if(!list.length){
+      userValue = inputBox.value;
+      listData = `<li>${userValue}</li>`;
+  }else{
+    listData = list.join('');
+  }
+  suggBox.innerHTML = listData;
 }
