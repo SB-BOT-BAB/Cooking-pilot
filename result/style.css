@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body {
+  background-image: url(https://www.wallpapertip.com/wmimgs/3-37938_dark-desktop-wallpaper-4k-hd-wallpaper-backgrounds-black.jpg);
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+a {
+  color: #333;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color:#fff; 
+  text-decoration:none; 
+  cursor:pointer;  
+}
