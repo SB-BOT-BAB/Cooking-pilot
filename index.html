@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+	
+    <link rel="icon" type="image/png" size="32" href="https://firebasestorage.googleapis.com/v0/b/cooking-pilot.appspot.com/o/air-pilot-hat.png?alt=media&token=b814f991-ca4a-45f4-b9f1-4361ff9cd594">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>Cooking Pilot || Free Cooking Recipe</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/cooking-pilot.appspot.com/o/style.css?alt=media&token=596dbbb7-ad75-4826-b644-f4b206630115">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.instagram.com/sahibveer__singh/" target="_blank">SB-_-BOT</a>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container-fluid">
+    <section id="welcome">
+        <img id="logo" class="img-responsive img-circle img-thumbnail" src="web_logo.jpeg" alt="Cooking Pilot">
+        <h1 class="text-capitalize text-main">COOKING&nbsp;PILOT</h1>
+        <p id="welcome_p" class="text-capitalize">hello
+            <br>
+        welcome to our website this is make to help people to cook.
+        <br>
+        every thing you want to learn
+        <br>
+        <br>
+        we are updating so Keep connected with us.</p>
+</section>
+<br>
+<section id="search">
+  <div class="wrapper">
+    <div class="search-input">
+      <a href="" target="_self" hidden></a>
+      <input id="input" type="text" placeholder="Type to search..">
+      <div class="autocom-box">
+        <!-- here list are inserted from javascript -->
+      </div>
+      <div class="icon"><i class="fa fa-search"></i></div>
+    </div>
+  </div>
+  <br>
+  <div id="result_div">
+    <div class="gallery">
+      <a class="0a" target="_blank" href="">
+        <img id="0_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="0_h5"></h5>
+        <h6 id="0_h6_diets"></h6>
+        <h6 id="0_h6_healthscore"></h6>
+        <h6 id="0_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="1a" target="_blank" href="">
+        <img id="1_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="1_h5"></h5>
+        <h6 id="1_h6_diets"></h6>
+        <h6 id="1_h6_healthscore"></h6>
+        <h6 id="1_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="2a" target="_blank" href="">
+        <img id="2_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="2_h5"></h5>
+        <h6 id="2_h6_diets"></h6>
+        <h6 id="2_h6_healthscore"></h6>
+        <h6 id="2_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="3a" target="_blank" href="">
+        <img id="3_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="3_h5"></h5>
+        <h6 id="3_h6_diets"></h6>
+        <h6 id="3_h6_healthscore"></h6>
+        <h6 id="3_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="4a" target="_blank" href="">
+        <img id="4_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="4_h5"></h5>
+        <h6 id="4_h6_diets"></h6>
+        <h6 id="4_h6_healthscore"></h6>
+        <h6 id="4_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="5a" target="_blank" href="">
+        <img id="5_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="5_h5"></h5>
+        <h6 id="5_h6_diets"></h6>
+        <h6 id="5_h6_healthscore"></h6>
+        <h6 id="5_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="6a" target="_blank" href="">
+        <img id="6_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="6_h5"></h5>
+        <h6 id="6_h6_diets"></h6>
+        <h6 id="6_h6_healthscore"></h6>
+        <h6 id="6_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="7a" target="_blank" href="">
+        <img id="7_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="7_h5"></h5>
+        <h6 id="7_h6_diets"></h6>
+        <h6 id="7_h6_healthscore"></h6>
+        <h6 id="7_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="8a" target="_blank" href="">
+        <img id="8_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="8_h5"></h5>
+        <h6 id="8_h6_diets"></h6>
+        <h6 id="8_h6_healthscore"></h6>
+        <h6 id="8_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="9a" target="_blank" href="">
+        <img id="9_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="9_h5"></h5>
+        <h6 id="9_h6_diets"></h6>
+        <h6 id="9_h6_healthscore"></h6>
+        <h6 id="9_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="10a" target="_blank" href="">
+        <img id="10_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="10_h5"></h5>
+        <h6 id="10_h6_diets"></h6>
+        <h6 id="10_h6_healthscore"></h6>
+        <h6 id="10_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="11a" target="_blank" href="">
+        <img id="11_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="11_h5"></h5>
+        <h6 id="11_h6_diets"></h6>
+        <h6 id="11_h6_healthscore"></h6>
+        <h6 id="11_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="12a" target="_blank" href="">
+        <img id="12_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="12_h5"></h5>
+        <h6 id="12_h6_diets"></h6>
+        <h6 id="12_h6_healthscore"></h6>
+        <h6 id="12_h6_license"></h6>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="13a" target="_blank" href="">
+        <img id="13_img" src="" alt="" width="600" height="400">
+      </a>
+      <div class="desc"><h5 id="13_h5"></h5>
+        <h6 id="13_h6_diets"></h6>
+        <h6 id="13_h6_healthscore"></h6>
+        <h6 id="13_h6_license"></h6>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer>
+	<p>Copyright &copy; 2021 SB -_- BOT</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js">
+  
+</script>
+
+<script type="text/javascript" src="main.js">
+    
+</script>
+    </body>
+    </html>
