@@ -23,7 +23,7 @@ $.getJSON(`https://api.spoonacular.com/recipes/complexSearch?query=${work}&numbe
 
       const sourceUrl = data.results[i].sourceUrl;
       localStorage.setItem("5C23656EE78197A7B46C2F2E6B6B2",sourceUrl);
-      $('.'+i+'a').attr("href","file:///Users/sahibveer/Desktop/Main/web%20dev%20vs/Cooking-pilot-main/result/index.html");
+      $('.'+i+'a').attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
   
     }
   }
@@ -59,7 +59,7 @@ inputBox.onkeyup = (e)=>{
     if(userData){
         icon.onclick = ()=>{
           localStorage.setItem("eyJkZXZpY2VJZCI6Ijc2ZmM2MWYxLWU3ZGEtNDE4Zi1hZjc2LTQ5Yjc5NmUwYjAwY1IiLCJ1c2VySWQiOiIxZGE1ZWI5MC05MGI4LTRhZDQtYTlkYS1hNmM4MDQzOWZjNTIiLCJvcHRPdXQiOmZhbHNlLCJzZXNzaW9uSWQiOjE2Mjk5NzI1NTM0NTYsImxhc3RFdmVudFRpbWUiOjE2Mjk5NzMxNjQ3MzksImV2ZW50SWQiOjIwMDQsImlkZW50aWZ5SWQiOjM0MSwic2VxdWVuY2VOdW1iZXIiOjIzNDV9",userData);
-            webLink = `file:///Users/sahibveer/Desktop/Main/web%20dev%20vs/Cooking-pilot-main/search/index.html`;
+            webLink = `https://sb-bot-bab.github.io/Cooking-pilot/search/`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
         }
@@ -101,7 +101,7 @@ function select(element){
   inputBox.value = selectData;
   icon.onclick = ()=>{
       localStorage.setItem("eyJkZXZpY2VJZCI6Ijc2ZmM2MWYxLWU3ZGEtNDE4Zi1hZjc2LTQ5Yjc5NmUwYjAwY1IiLCJ1c2VySWQiOiIxZGE1ZWI5MC05MGI4LTRhZDQtYTlkYS1hNmM4MDQzOWZjNTIiLCJvcHRPdXQiOmZhbHNlLCJzZXNzaW9uSWQiOjE2Mjk5NzI1NTM0NTYsImxhc3RFdmVudFRpbWUiOjE2Mjk5NzMxNjQ3MzksImV2ZW50SWQiOjIwMDQsImlkZW50aWZ5SWQiOjM0MSwic2VxdWVuY2VOdW1iZXIiOjIzNDV9",selectData);
-      webLink = `file:///Users/sahibveer/Desktop/Main/web%20dev%20vs/Cooking-pilot-main/search/index.html`;
+      webLink = `https://sb-bot-bab.github.io/Cooking-pilot/search/`;
       linkTag.setAttribute("href", webLink);
       linkTag.click();
   }
