@@ -12,18 +12,18 @@ $.getJSON(`https://api.spoonacular.com/recipes/complexSearch?query=${work}&numbe
 
     for (let i = 0; i < number; i++) {
 
-      document.getElementById("gallery_"+i).style.visibility = "visible";
-      document.getElementById("gallery_"+i).style.height = "250px";
+      document.getElementById(`gallery_${i}`).style.visibility = "visible";
+      document.getElementById(`gallery_${i}`).style.height = "250px";
 
       const logo = data.results[i].image;
-      $('#'+i+'_img').attr("src", logo);
+      $(`#${i}_img`).attr("src", logo);
   
       const Name = data.results[i].title;
-      $('#'+i+'_h5').append(Name);
+      $(`#${i}_h5`).append(Name);
 
       const sourceUrl = data.results[i].sourceUrl;
       localStorage.setItem("5C23656EE78197A7B46C2F2E6B6B2",sourceUrl);
-      $('.'+i+'a').attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
+      $(`.${i}a').attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
   
     }
   }
