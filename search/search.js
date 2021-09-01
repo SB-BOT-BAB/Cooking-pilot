@@ -23,7 +23,7 @@ $.getJSON(`https://api.spoonacular.com/recipes/complexSearch?query=${work}&numbe
 
       const sourceUrl = data.results[i].sourceUrl;
       localStorage.setItem("5C23656EE78197A7B46C2F2E6B6B2",sourceUrl);
-      $(`.${i}a').attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
+      $(`.${i}a`).attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
   
     }
   }
