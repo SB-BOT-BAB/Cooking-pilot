@@ -2,29 +2,28 @@
 $.getJSON("https://api.spoonacular.com/recipes/random?number=14&apiKey=59f80c029a6a4e0c9048f8a08f86fde8", function(data){
 
     for (let i = 0; i < 14; i++) {
-  
       const logo = data.recipes[i].image;
-      $('#'+i+'_img').attr("src", logo);
+      $(`#${i}_img`).attr("src", logo);
   
   
       const Name = data.recipes[i].title;
-      $('#'+i+'_h5').append(Name);
+      $(`#${i}_h5`).append(Name);
     
   
       const diet = data.recipes[i].diets;
-      $('#'+i+'_h6_diets').append(diet);
+      $(`#${i}_h6_diets`).append(diet);
   
       const healthscore = data.recipes[i].healthScore;
-      $('#'+i+'_h6_healthscore').append("health Score :- ",healthscore);
+      $(`#${i}_h6_healthscore`).append("health Score :- ",healthscore);
   
   
       const licenseby = data.recipes[i].license;
-      $('#'+i+'_h6_license').append(licenseby);
+      $(`#${i}_h6_license`).append(licenseby);
   
   
       const sourceurl = data.recipes[i].sourceUrl;
       localStorage.setItem("5C23656EE78197A7B46C2F2E6B6B2",sourceurl);
-      $('.'+i+'a').attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
+      $(`.${i}a`).attr("href","https://sb-bot-bab.github.io/Cooking-pilot/result/");
   
     }
   
