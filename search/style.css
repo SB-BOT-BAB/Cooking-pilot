@@ -17,6 +17,7 @@ body {
 }
  #logo{
      margin-top: 20px;
+     border-radius:25px;
      max-height: 150px;
      max-width: 150px;
  }
